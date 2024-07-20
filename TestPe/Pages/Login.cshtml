@@ -1,0 +1,21 @@
+﻿@page
+@model TestPe.Pages.LoginModel
+@{
+    ViewData["Title"] = "LoginPage";
+}
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@modelError.ErrorMessage</p>
+        }
+    </div>
+}
+<form method="post">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <label asp-for="Password"></label>
+    <input asp-for="Password" />
+    <input type="submit" value="Sign up" />
+</form>

@@ -1,0 +1,43 @@
+﻿@page
+@model TestPe.Pages.account.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SystemAccount</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SystemAccount.AccountPassword)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SystemAccount.AccountPassword)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SystemAccount.AccountFullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SystemAccount.AccountFullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SystemAccount.AccountEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SystemAccount.AccountEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SystemAccount.Role)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SystemAccount.Role)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.SystemAccount.AccountId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
